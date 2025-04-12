@@ -39,8 +39,9 @@
 		<dependency>
 			<groupId>com.azure</groupId>
 			<artifactId>azure-messaging-eventhubs</artifactId>
-			<version>3.3.0</version>
+			<version>5.15.3</version> <!-- or latest -->
 		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
