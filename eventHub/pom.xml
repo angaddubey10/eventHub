@@ -43,6 +43,16 @@
 			<artifactId>azure-messaging-eventhubs</artifactId>
 
 		</dependency>
+		<dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-storage-blob</artifactId>
+			<version>12.25.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.azure.spring</groupId>
+			<artifactId>spring-cloud-azure-service</artifactId>
+			<version>5.22.0</version>
+		</dependency>
 
 	</dependencies>
 	<dependencyManagement>
@@ -54,6 +64,12 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<dependency>
+				<groupId>com.azure</groupId>
+				<artifactId>azure-messaging-eventhubs-checkpointstore-blob</artifactId>
+				<version>1.16.0</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 	<build>

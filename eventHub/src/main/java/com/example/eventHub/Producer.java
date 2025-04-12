@@ -7,8 +7,8 @@ import com.azure.core.util.BinaryData;
 
 public class Producer {
 
-    private static final String connectionString = "";
-    private static final String eventHubName = "iwbderserv";
+    private static final String connectionString = Config.EH_NAMESPACE_CONNECTION_STRING;
+    private static final String eventHubName = Config.EVENT_HUB_NAME;
 
     public static void ProducerMain() {
         EventHubProducerClient producer = new EventHubClientBuilder()
@@ -19,7 +19,7 @@ public class Producer {
         EventDataBatch batch = producer.createBatch();
 
         for (int i = 0; i < 5; i++) {
-            String message = "Hey there and I'm counting up to .... " + i;
+            String message = "Hey there, eventhubs here and I'm counting up to .... " + i;
             EventData eventData = new EventData(BinaryData.fromString(message));
 
             if (!batch.tryAdd(eventData)) {

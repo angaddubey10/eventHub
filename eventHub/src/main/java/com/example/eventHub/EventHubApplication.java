@@ -7,9 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class EventHubApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EventHubApplication.class, args);
+		//SpringApplication.run(EventHubApplication.class, args);
 
 		Producer.ProducerMain();
+
 	}
 
 }
