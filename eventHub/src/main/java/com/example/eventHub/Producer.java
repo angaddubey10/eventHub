@@ -10,7 +10,7 @@ public class Producer {
     private static final String connectionString = "";
     private static final String eventHubName = "iwbderserv";
 
-    public static void main(String[] args) {
+    public static void ProducerMain() {
         EventHubProducerClient producer = new EventHubClientBuilder()
                 .connectionString(connectionString, eventHubName)
                 .buildProducerClient();
@@ -19,7 +19,7 @@ public class Producer {
         EventDataBatch batch = producer.createBatch();
 
         for (int i = 0; i < 5; i++) {
-            String message = "Hey I am Angad and I'm counting up to .... " + i;
+            String message = "Hey there and I'm counting up to .... " + i;
             EventData eventData = new EventData(BinaryData.fromString(message));
 
             if (!batch.tryAdd(eventData)) {

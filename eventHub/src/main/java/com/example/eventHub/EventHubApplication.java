@@ -8,6 +8,8 @@ public class EventHubApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EventHubApplication.class, args);
+
+		Producer.ProducerMain();
 	}
 
 }
